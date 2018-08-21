@@ -31,9 +31,3 @@ button.addEventListener( 'click', function( event ) {
   var index = buttons.indexOf( event.target );
   flkty.selectCell( 0 );
 });
-/* element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity( '.main-carousel', {
-  // options
-});
-*/
