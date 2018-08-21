@@ -5,8 +5,8 @@ var flkty = new Flickity( elem, {
   pageDots: false,
   freeScroll: true,
   wrapAround: true,
-  autoPlay: true,
-  pauseAutoPlayOnHover: false,
+  autoPlay: 3000,
+  pauseAutoPlayOnHover: true,
   hash: true,
   contain: true
 });
@@ -19,6 +19,18 @@ flkty.on( 'scroll', function( progress ) {
   progressBar.style.width = progress * 100 + '%';
 });
 
+var button = document.querySelector('.button');
+var buttons = button.querySelector('.button-restart');
+buttons = fizzyUIUtils.makeArray( buttons );
+
+button.addEventListener( 'click', function( event ) {
+  // filter for button clicks
+  if ( !matchesSelector( event.target, '.button-restart' ) ) {
+    return;
+  }
+  var index = buttons.indexOf( event.target );
+  flkty.selectCell( 0 );
+});
 /* element argument can be a selector string
 //   for an individual element
 var flkty = new Flickity( '.main-carousel', {
