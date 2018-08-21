@@ -1,12 +1,27 @@
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
-  cellAlign: 'left',
+  cellAlign: 'center',
+  pageDots: false,
+  freeScroll: true,
+  wrapAround: true,
+  autoPlay: true,
+  pauseAutoPlayOnHover: false,
+  hash: true,
   contain: true
 });
+var flkty = new Flickity('.main-carousel');
 
-// element argument can be a selector string
+var progressBar = document.querySelector('.progress-bar')
+
+flkty.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
+
+/* element argument can be a selector string
 //   for an individual element
 var flkty = new Flickity( '.main-carousel', {
   // options
 });
+*/
