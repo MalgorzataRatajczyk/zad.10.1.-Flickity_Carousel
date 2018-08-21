@@ -1,23 +1,28 @@
 * { 
     box-sizing: border-box;
 }
+
 .button {
+    position: relative;
     .button-restart {
         font-siez: 30px;
         font-family: 'Arial';
         border: 1px solid black;
-        padding: 5px;
-        margin: 5px;
-        float: right;
-        right: 0;
+         padding: 5px;
         border-radius: 5px;
+        float: right;
+        font-weight: bold;
     }
 }
+a {
+    padding: 0 10px;
+}
+
 .main-carousel {
     background-color: black;
     .carousel-cell {
-        width: 80%;
-        height: 70%;
+        width: 100%;
+        height: 50vw;
         min-height: 250px;
         border-radius: 5px;
         img {
