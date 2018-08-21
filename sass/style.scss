@@ -25,6 +25,7 @@ a {
         height: 50vw;
         min-height: 250px;
         border-radius: 5px;
+        position: relative;
         img {
             display: block;
             max-width: 100%;
@@ -32,8 +33,12 @@ a {
             margin: 0 auto;
         }
         p {
-            font-size: 80px;
-            color: black;
+            font-size: 40px;
+            color: yellow;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }

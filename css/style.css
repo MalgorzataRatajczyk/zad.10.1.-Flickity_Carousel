@@ -29,6 +29,7 @@ a {
   height: 50vw;
   min-height: 250px;
   border-radius: 5px;
+  position: relative;
 }
 
 .main-carousel .carousel-cell img {
@@ -39,8 +40,12 @@ a {
 }
 
 .main-carousel .carousel-cell p {
-  font-size: 80px;
+  font-size: 40px;
   color: black;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .progress-bar {
