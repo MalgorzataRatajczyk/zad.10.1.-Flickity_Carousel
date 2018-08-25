@@ -21,66 +21,51 @@
         <a href="#carousel-cell5">Fot. 5</a>
         <a href="#carousel-cell5">Fot. 6</a>
         </p>
-        <div class="main-carousel" data-flickity=''>
-            <div class="carousel-cell" id="carousel-cell1">
-                <img src="images/Ansouis.JPG" alt="Ansouis">
-                <p>Ansouis, Provence, France</p>
-            </div>
-            <div class="carousel-cell" id="carousel-cell2">
-                <img src="images/Gordes.JPG" alt="Gordes">
-                <p>Gordes, Provence, France</p>
-            </div>
-            <div class="carousel-cell" id="carousel-cell3">
-                <img src="images/Lacoste.JPG" alt="Lacoste">
-                <p>Lacoste, Provence, France</p>
-            </div>
-            <div class="carousel-cell" id="carousel-cell4">
-                <img src="images/Oppede-le-Vieux.JPG" alt="Oppede-le-Vieux">
-                <p>Oppede-le-Vieux, Provence, France</p>
-            </div>
-            <div class="carousel-cell" id="carousel-cell5">
-                <img src="images/Roussillon.JPG" alt="Roussillon">
-                <p>Roussillon, Provence, France</p>
-            </div>
-            <div class="carousel-cell" id="carousel-cell6">
-                <img src="images/Vaison-le-Romaine.JPG" alt="Vaison-le-Romaine">
-                <p>Vaison-le-Romaine, Provence, France</p>
-            </div>
+        <div class="main-carousel">
+            <div class="slides">
+
+            </div>            
         </div>
         <div class="progress-bar"></div>
-        <script id="template" type="x-tmpl-mustache">
-
+        <script id="template-slideShow" type="x-tmpl-mustache">
+            <div class="carousel-cell">
+                <img src={{ image }} alt={{ description }}>
+                <div>
+                    <h2>{{ title }}</h2>
+                    <p>{{ description }}</p>
+                </div>
+            </div>
         </script>
-        <script>
+        <script type="text/javascript">
             var slideShow = [
                 { 
                     image: 'images/Ansouis.JPG',
-                    title: 'Provence, France',
+                    title: 'Provence France',
                     description: 'Ansouis'
                 },
                 {
                     image: 'images/Gordes.JPG',
-                    title: 'Provence, France',
+                    title: 'Provence France',
                     description: 'Gordes'
                 },
                 {
                     image: 'images/Lacoste.JPG',
-                    title: 'Provence, France',
+                    title: 'Provence France',
                     description: 'Lacost'  
-                }
+                },
                 {
                     image: 'images/Oppede-le-Vieux.JPG',
-                    title: 'rovence, France',
+                    title: 'rovence France',
                     description: 'Oppede-le-Vieux'  
-                }
+                },
                 {
                     image: 'images/Roussillon.JPG',
-                    title: 'Provence, France',
+                    title: 'Provence France',
                     description: 'Roussillon'  
-                }
+                },
                 {
                     image: 'images/Vaison-le-Romaine.JPG',
-                    title: 'Provence, France',
+                    title: 'Provence France',
                     description: 'Vaison-le-Romaine'  
                 }
             ];

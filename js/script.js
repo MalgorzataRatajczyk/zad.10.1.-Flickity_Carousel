@@ -1,4 +1,20 @@
+"use strict";
+
+var templateSlideItem = document.getElementById('template-slideShow').innerHTML;
+Mustache.parse(templateSlideItem);
+var slideItems = '';
 var elem = document.querySelector('.main-carousel');
+var slides = document.getElementById('slides');
+
+for (var i = 0; i < slideShow.length; i++){
+  
+  slideItems += Mustache.render(templateSlideItem, slideShow[i]);
+  
+}
+
+slides.innerHTML = slideItems;
+
+var flkty = new Flickity('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'center',
@@ -10,7 +26,6 @@ var flkty = new Flickity( elem, {
   hash: true,
   contain: true
 });
-var flkty = new Flickity('.main-carousel');
 
 var progressBar = document.querySelector('.progress-bar')
 
@@ -31,3 +46,4 @@ button.addEventListener( 'click', function( event ) {
   var index = buttons.indexOf( event.target );
   flkty.selectCell( 0 );
 });
+
