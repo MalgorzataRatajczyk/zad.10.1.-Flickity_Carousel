@@ -1,18 +1,18 @@
 "use strict";
 
-var templateSlideItem = document.getElementById('template-slideShow').innerHTML;
-Mustache.parse(templateSlideItem);
-var slideItems = '';
+var templateSlideItems = document.getElementById('template-slideShow').innerHTML;
+Mustache.parse(templateSlideItems);
+var slideItem = '';
 var elem = document.querySelector('.main-carousel');
 var slides = document.getElementById('slides');
 
 for (var i = 0; i < slideShow.length; i++){
   
-  slideItems += Mustache.render(templateSlideItem, slideShow[i]);
+  slideItem += Mustache.render(templateSlideItems, slideShow[i]);
   
 }
 
-slides.innerHTML = slideItems;
+slides.innerHTML = slideItem;
 
 var flkty = new Flickity('.main-carousel');
 var flkty = new Flickity( elem, {
@@ -24,7 +24,7 @@ var flkty = new Flickity( elem, {
   autoPlay: 3000,
   pauseAutoPlayOnHover: true,
   hash: true,
-  contain: true
+  contain: true,
 });
 
 var progressBar = document.querySelector('.progress-bar')
