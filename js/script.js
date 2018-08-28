@@ -3,20 +3,18 @@
 var templateSlideItems = document.getElementById('template-slideShow').innerHTML;
 Mustache.parse(templateSlideItems);
 var slideItem = '';
-var elem = document.querySelector('.main-carousel');
 var slides = document.getElementById('slides');
 
-for (var i = 0; i < slideShow.length; i++){
+  for (var i = 0; i < slideShow.length; i++){
   
-  slideItem += Mustache.render(templateSlideItems, slideShow[i]);
+    slideItem += Mustache.render(templateSlideItems, slideShow[i]);
   
-}
+  }
 
 slides.innerHTML = slideItem;
+var elem = document.querySelector('.main-carousel');
 
-var flkty = new Flickity('.main-carousel');
-var flkty = new Flickity( elem, {
-  // options
+var flkty = new Flickity('.main-carousel', {
   cellAlign: 'center',
   pageDots: false,
   freeScroll: true,
