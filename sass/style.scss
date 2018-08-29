@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 body {
-    background-color: darkgray;
+    background-color: darkgrey;
 }
 .button {
-    height: 20px;
-    width: 40px;
+    position: relative;
     .button-restart {
         font-size: 20px;
         font-family: 'Arial';
@@ -16,6 +15,11 @@ body {
         float: right;
         font-weight: bold;
     }
+}
+a {
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .main-carousel {
     background-color: black;
@@ -46,6 +50,10 @@ body {
     height: 20px;
     width: 0;
     background-color: darkblue;
+}
+#infos {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
 }
 #map {
     width: 100%;

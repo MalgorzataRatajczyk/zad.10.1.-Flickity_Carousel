@@ -19,17 +19,18 @@
             <a href="#carousel-cell3">Fot. 3</a>
             <a href="#carousel-cell4">Fot. 4</a>
             <a href="#carousel-cell5">Fot. 5</a>
-            <a href="#carousel-cell5">Fot. 6</a>
+            <a href="#carousel-cell6">Fot. 6</a>
             </p>
         <div id="slides" class="main-carousel">
                      
         </div>
         <div class="progress-bar"></div>
+        <p id="infos"></p>
         <div id="map">
 
         </div>
         <script id="template-slideShow" type="x-tmpl-mustache">
-            <div class="carousel-cell">
+            <div class="carousel-cell" id={{ id }}>
                 <img src={{ image }} alt={{ description }}>
                 <div>
                     <h2>{{ title }}</h2>
@@ -40,36 +41,42 @@
         <script type="text/javascript">
             var slideShow = [
                 { 
+                    id: 'carousel-cell1',
                     image: 'images/Ansouis.JPG',
                     title: 'Provence France',
                     description: 'Ansouis',
                     coords: {lat: 43.7375434, lng: 5.4639664}
                 },
                 {
+                    id: 'carousel-cell2',
                     image: 'images/Gordes.JPG',
                     title: 'Provence France',
                     description: 'Gordes',
                     coords: {lat: 43.9110641, lng: 5.2002043}
                 },
                 {
+                    id: 'carousel-cell3',
                     image: 'images/Lacoste.JPG',
                     title: 'Provence France',
                     description: 'Lacoste', 
                     coords: {lat: 43.8318965, lng: 5.2728505}
                 },
                 {
+                    id: 'carousel-cell4',
                     image: 'images/Oppede-le-Vieux.JPG',
                     title: 'rovence France',
                     description: 'Oppede-le-Vieux',
                     coords: {lat: 43.8283566, lng: 5.1609922}
                 },
                 {
+                    id: 'carousel-cell5',
                     image: 'images/Roussillon.JPG',
                     title: 'Provence France',
                     description: 'Roussillon',
                     coords: {lat: 43.9024768, lng: 5.2920876}
                 },
                 {
+                    id: 'carousel-cell6',
                     image: 'images/Vaison-le-Romaine.JPG',
                     title: 'Provence France',
                     description: 'Vaison-le-Romaine',

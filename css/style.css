@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: darkgrey;
+}
+
 .button {
-  display: block;
+  position: relative;
 }
 
 .button .button-restart {
@@ -13,6 +17,12 @@
   padding: 5px;
   border-radius: 5px;
   float: right;
+  font-weight: bold;
+}
+
+a {
+  padding: 0 10px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -49,6 +59,11 @@
   height: 20px;
   width: 0;
   background-color: darkblue;
+}
+
+#infos {
+  color: black;
+  font-size: 30px;
 }
 
 #map {

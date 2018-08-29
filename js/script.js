@@ -52,11 +52,16 @@
   // Dodajemy mapę do projektu poprzez  zdefiniowanie funkcji initMap w zakresie globalnym (czyli jako właściwość obiektu window).
   window.initMap = function () {
 
+    var infos = document.getElementById('infos');
+
     // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne pierwszego slajdu.
     var ansouis = {lat: 43.7375434, lng: 5.4639664};
 
     // Wyśrodkowanie mapy na współrzędne z pierwszego slajdu. 
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: ansouis});
+    var map = new google.maps.Map(document.getElementById('map'),
+      {zoom: 10,
+      center: ansouis
+    });
 
     // Pętla dodająca po jednym markerze do każdego slajdu
     for (i = 0; i < slideShow.length; i++) {
@@ -67,7 +72,7 @@
       // Po dodaniu markerów przypisujemy do nich akcję na kliknięcie addListener:
       marker.addListener('click', function(){
         
-        
+        infos.innerHTML = 'You clicked' + slideShow[i]['title'];
 
       });
 
