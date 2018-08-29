@@ -3,7 +3,7 @@
 }
 
 .button {
-  position: relative;
+  display: block;
 }
 
 .button .button-restart {
@@ -16,12 +16,9 @@
   font-weight: bold;
 }
 
-a {
-  padding: 0 10px;
-}
-
 .main-carousel {
   background-color: black;
+  margin-top: 50px;
 }
 
 .main-carousel .carousel-cell {
@@ -52,6 +49,12 @@ a {
   height: 20px;
   width: 0;
   background-color: darkblue;
+}
+
+#map {
+  width: 100%;
+  height: 50vw;
+  background-color: grey;
 }
 
 /*# sourceMappingURL=style.css.map */

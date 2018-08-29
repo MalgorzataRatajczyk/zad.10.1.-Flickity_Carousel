@@ -1,7 +1,7 @@
 "use strict";
 
 (function(){ 
-
+// kod generujący slajdy z szablonu html
   var templateSlideItems = document.getElementById('template-slideShow').innerHTML;
   Mustache.parse(templateSlideItems);
   var slideItem = '';
@@ -14,6 +14,8 @@
     }
 
   slides.innerHTML = slideItem;
+
+  // kod dla FlickityCarousel
   var elem = document.querySelector('.main-carousel');
 
   var flkty = new Flickity('.main-carousel', {
@@ -47,19 +49,30 @@
     flkty.selectCell( 0 );
   });
 
-  // Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
+  // Dodajemy mapę do projektu poprzez  zdefiniowanie funkcji initMap w zakresie globalnym (czyli jako właściwość obiektu window).
   window.initMap = function () {
-    // Zapisujemy w zmiennej obiekty zawierające współrzędne geograficzne.
-    var uluru = {lat: -25.344, lng: 131.036};
-    // W zmiennej map zapisujemy nową instancję obiektu Map. 
-    var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: uluru});
-    // Definiujemy marker jako nową instancję obiektu Marker.
-    var marker = new google.maps.Marker({position: uluru, map: map});
-  }
-  // Po dodaniu markera możemy użyć jego metody addListener:
-		markerOne.addListener('click', function(){
-    // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
-    infos.innerHTML = 'You clicked markerOne';
-  });		
+
+    // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne pierwszego slajdu.
+    var ansouis = {lat: 43.7375434, lng: 5.4639664};
+
+    // Wyśrodkowanie mapy na współrzędne z pierwszego slajdu. 
+    var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: ansouis});
+
+    // Pętla dodająca po jednym markerze do każdego slajdu
+    for (i = 0; i < slideShow.length; i++) {
+      var marker = new google.maps.Marker({
+        position: slideShow[i].coords,
+        map: map
+      })
+      // Po dodaniu markerów przypisujemy do nich akcję na kliknięcie addListener:
+      marker.addListener('click', function(){
+        
+        
+
+      });
+
+    }
+
+  }		
 
 })();  
