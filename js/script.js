@@ -69,12 +69,6 @@
         position: slideShow[i].coords,
         map: map
       })
-      // Po dodaniu markerów przypisujemy do nich akcję na kliknięcie addListener:
-      marker.addListener('click', function(){
-        
-        infos.innerHTML = 'You clicked' + slideShow[i]['title'];
-
-      });
 
     }
 
