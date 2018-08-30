@@ -59,7 +59,7 @@
 
     // Wyśrodkowanie mapy na współrzędne z pierwszego slajdu. 
     var map = new google.maps.Map(document.getElementById('map'),
-      {zoom: 10,
+    { zoom: 10,
       center: ansouis
     });
 
@@ -69,9 +69,18 @@
         position: slideShow[i].coords,
         map: map
       })
+      marker.addListener('click', function(event) {
+        infos.innerHTML = 'You clicked ' + slideShow[i].description;
+        flkty.select(i);
+      });
 
     }
 
+    flkty.on( 'change', function( i ) {
+      console.log('Flickity change ' + i );
+      
+    });
+    
   }		
 
 })();  

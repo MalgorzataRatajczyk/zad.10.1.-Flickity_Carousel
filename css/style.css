@@ -1,75 +1,23 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body {
-  background-color: darkgrey;
-}
+body { background-color: darkgrey; }
 
-.button {
-  position: relative;
-}
+.button { position: relative; }
 
-.button .button-restart {
-  font-size: 20px;
-  font-family: 'Arial';
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
-  float: right;
-  font-weight: bold;
-}
+.button .button-restart { font-size: 20px; font-family: 'Arial'; border: 1px solid black; padding: 5px; border-radius: 5px; float: right; font-weight: bold; }
 
-a {
-  padding: 0 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
+a { padding: 0 10px; font-size: 20px; font-weight: bold; }
 
-.main-carousel {
-  background-color: black;
-  margin-top: 50px;
-}
+.main-carousel { background-color: black; margin-top: 50px; }
 
-.main-carousel .carousel-cell {
-  width: 100%;
-  height: 50vw;
-  min-height: 250px;
-  border-radius: 5px;
-  position: relative;
-}
+.main-carousel .carousel-cell { width: 100%; height: 50vw; min-height: 250px; border-radius: 5px; position: relative; }
 
-.main-carousel .carousel-cell img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
-}
+.main-carousel .carousel-cell img { display: block; max-width: 100%; max-height: 100%; margin: 0 auto; }
 
-.main-carousel .carousel-cell p {
-  font-size: 40px;
-  color: yellow;
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+.main-carousel .carousel-cell p { font-size: 40px; color: yellow; position: absolute; top: 30px; left: 50%; transform: translate(-50%, -50%); }
 
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background-color: darkblue;
-}
+.progress-bar { height: 20px; width: 0; background-color: darkblue; }
 
-#infos {
-  color: black;
-  font-size: 30px;
-}
+#infos { color: black; font-size: 30px; }
 
-#map {
-  width: 100%;
-  height: 50vw;
-  background-color: grey;
-}
-
-/*# sourceMappingURL=style.css.map */
+#map { width: 100%; height: 50vw; background-color: grey; }
