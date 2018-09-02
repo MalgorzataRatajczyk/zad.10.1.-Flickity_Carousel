@@ -28,14 +28,14 @@
     hash: true,
     contain: true,
   });
-
+  //kod do paska postępu
   var progressBar = document.querySelector('.progress-bar')
 
   flkty.on( 'scroll', function( progress ) {
     progress = Math.max( 0, Math.min( 1, progress ) );
     progressBar.style.width = progress * 100 + '%';
   });
-
+  // kod do guzika restart cofającego karuzelę do pierwszego slajdu
   var button = document.querySelector('.button');
   var buttons = button.querySelector('.button-restart');
   buttons = fizzyUIUtils.makeArray( buttons );
@@ -71,7 +71,7 @@
       })
       marker.addListener('click', function(event) {
         infos.innerHTML = 'You clicked ' + slideShow[i].description;
-        flkty.select(i);
+        
       });
 
     }
