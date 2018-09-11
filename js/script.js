@@ -55,12 +55,12 @@
     var infos = document.getElementById('infos');
 
     // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne pierwszego slajdu.
-    var ansouis = {lat: 43.7375434, lng: 5.4639664};
+    var gordes = {lat: 43.9110641, lng: 5.2002043};
 
     // Wyśrodkowanie mapy na współrzędne z pierwszego slajdu. 
     var map = new google.maps.Map(document.getElementById('map'),
     { zoom: 10,
-      center: ansouis
+      center: gordes
     });
 
     // Pętla dodająca po jednym markerze do każdego slajdu
@@ -70,14 +70,16 @@
         map: map
       })
       marker.addListener('click', function(event) {
-        infos.innerHTML = 'You clicked ' + slideShow[i].description;
-        
+        //infos.innerHTML = 'You clicked ' + slideShow[i].description;
+        flkty.select(i);
       });
 
     }
 
     flkty.on( 'change', function( i ) {
-      console.log('Flickity change ' + i );
+
+      map.panTo(slideShow[i].coords);
+			map.setZoom(12);
       
     });
     
